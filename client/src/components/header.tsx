@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom"
+import { MobileNav } from "./mobile-nav"
+import { Button } from "./ui/button"
 
 export const Header = () => {
     return (
@@ -7,6 +9,14 @@ export const Header = () => {
                 <Link to="/" className="text-3xl font-bold tracking-tight text-orange-500" >
                     MernEats.com
                 </Link>
+                <div className="md:hidden" >
+                    <MobileNav />
+                </div>
+                <div className="hidden md:block" >
+                    <Button variant="ghost" className="font-bold hover:text-orange-500 hover:bg-white transition" >
+                        Log In
+                    </Button>
+                </div>
             </div>
         </div>
     )
