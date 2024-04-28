@@ -14,7 +14,7 @@ const app = express()
 app.use(express.json())
 app.use(cors())
 
-app.use("/api/my/user", userRouter)
+app.use("/api/user", userRouter)
 
 app.listen(7000, ()=> {
     console.log("Server is listening to port 7000")
